@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   font-size: 20px;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 body {
@@ -59,6 +59,7 @@ nav {
   background: linear-gradient(#0000004d, #00000000);
   backdrop-filter: blur(10px);
   padding: 20px;
+  text-align: center;
 }
 
 nav ul {
@@ -127,6 +128,8 @@ article {
   justify-content: center;
   font-size: 3vh;
 }
+
+
 article h1 {
   font-size: 5vh;
   padding: 50px 0;
@@ -134,13 +137,23 @@ article h1 {
 
 table {
   font-size: 3vh;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+  width: 100%;
 }
+
 td {
   padding: 30px;
+  border: 2px solid rgb(58, 58, 65);
+  border-left: none;
+  margin: 0 50px;
 }
 
 tr td:first-child {
   font-weight: bold;
+  border-right: 1px solid rgb(77, 77, 83);;
+  border-left: 2px solid rgb(58, 58, 65);
+  text-align: right;
 }
 
 section::after {
@@ -157,11 +170,27 @@ footer {
   color: white;
 }
 
-@media only screen and (max-width: 910px) {
-*{
-  font-size: 15px;
+#clock {
+  position: absolute;
+  top:0;
+  left:0;
+  font-size: 1.2rem;
+  padding: 0.3rem;
 }
 
+#dropdown{
+  color:white;
+  font-size:3rem;
+  display: none;
+  width: 100px;
+  text-align: center;
+  float: none;
+}
+
+@media only screen and (max-width: 1025px) {
+  nav{
+    position:relative;
+  }
   nav ul li {
     display: block;
     margin: 0;
@@ -169,14 +198,22 @@ footer {
   nav{
     padding: 0;
   }
-  h2 {
-    font-size: 3rem;
-    padding: 2rem;
-  }
   #container {
-    grid-template-columns: auto;
+    grid-template-columns: auto; 
   }
 }
-@media only screen and (max-width: 500px) {
-  /* todo */
+@media only screen and (max-width: 769px) {
+  h2{
+    font-size: 15vw;
+    padding: 5rem 5vw;
+  }
+  nav ul{
+    display: none;
+  }
+  #dropdown{
+    display: inline-block;
+  }
+  #dropdown:hover{
+    text-shadow: 0 0 10px white ;
+  }
   }
